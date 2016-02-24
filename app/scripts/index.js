@@ -2,12 +2,12 @@ var $ = require('jquery');
 var _ = require('underscore');
 var handlebars = require('handlebars');
 
-
-  //(url: String, callback: Function) -> undefined
-
-  //Execute a callback function with the JSON results from the url specified.
-
-//  Examples
+//
+//   //(url: String, callback: Function) -> undefined
+//
+//   //Execute a callback function with the JSON results from the url specified.
+//
+// //  Examples
       var url = "https://api.etsy.com/v2/listings/active.js?api_key=wxzc5mem72u720g3hcpbpo86&keywords=terrarium&includes=Images,Shop";
 
 
@@ -37,8 +37,30 @@ function logData(data) {
 fetchJSONP(url, logData);
 
 function bigScope(data){
-  var numSearchResults = data.count;
-  console,log(numSearchResults);
+var numSearchResults = data.count;
+var script = $('#search-text').html();
+var templateScript = handlebars.compile(script);
+var context = {
+  'numOfResults': numSearchResults,
+  'searchShop': 'terrarium'
+}
+var compiledHtml = templateScript(context);
+
+$('.search-text-section').html(compiledHtml);
+
+
+var source = $('#thumbnails').html();
+var templateSource = handlebars.compile(source);
+
+
+var compiled = templateSource(data);
+
+$('.images-section').html(compiled);
+
+
+
+
+
 }
 
 
@@ -46,14 +68,17 @@ function bigScope(data){
 
 
 
+
+
+
+
+
+
+
+
+
+
 //
-// var script = $('#search-text').html();
-// var templateScript = handlebars.compile(script);
-// var context = {
-//   numOfResults: numSearchResults;
-//   searchShop: 'terrarium';
-// }
-//
-// var compiledHtml = templateScript(context);
-//
-// $('search-text').html(compiledHtml);
+// $(function(){
+//   var results = $.ajax('');
+// }(jQuery));

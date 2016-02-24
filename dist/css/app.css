@@ -5906,7 +5906,9 @@ body {
   height: 384px;
   padding: 10px;
   border: 1px solid #e1e3df;
-  margin: 15px 0 15px 0; }
+  margin: 10px -10px 15px 0; }
+  .first-sidebar #all-cats {
+    cursor: pointer; }
   .first-sidebar .all-cats {
     list-style: none;
     font-weight: lighter;
@@ -5919,8 +5921,13 @@ body {
         text-decoration: none;
         color: #0092b7; }
 
+.search-text-section {
+  margin-left: 10px; }
+
 .search-text .inline {
   display: inline; }
+  .search-text .inline a {
+    color: #0092b7; }
 .search-text #sort-by {
   float: right; }
   .search-text #sort-by span {
@@ -5930,20 +5937,100 @@ body {
   margin-top: 10px;
   display: block;
   margin-bottom: 10px; }
+  .search-text #own-line a {
+    text-decoration: none;
+    color: #0092b7; }
+
+.refine {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #e1e3df; }
+
+.item-type ul {
+  padding-left: 10px; }
+  .item-type ul li {
+    color: #0092b7;
+    text-decoration: underline;
+    list-style: none;
+    font-family: Helvetica; }
+    .item-type ul li label {
+      font-weight: 100;
+      margin-left: 5px; }
+
+.price-filter {
+  display: inline-block; }
+  .price-filter button {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid #0092b7; }
+  .price-filter textarea {
+    border: 1px solid #0092b7;
+    font-family: sans-serif;
+    text-align: center;
+    vertical-align: bottom;
+    font-size: 20px;
+    font-weight: lighter;
+    height: 40px;
+    width: 75px;
+    border-radius: 5px; }
+  .price-filter p {
+    display: inline; }
+
+.filt-by-color {
+  display: inline; }
+  .filt-by-color .color {
+    height: 22px;
+    width: 22px;
+    border-radius: 4px;
+    border: 1px solid #e2e2e2;
+    margin-right: -1px; }
+  .filt-by-color #col1 {
+    background-color: #f22429; }
+  .filt-by-color #col2 {
+    background-color: #ff7f00; }
+  .filt-by-color #col3 {
+    background-color: #f4cd00; }
+  .filt-by-color #col4 {
+    background-color: #00c400; }
+  .filt-by-color #col5 {
+    background-color: #00cbf5; }
+  .filt-by-color #col6 {
+    background-color: #a736f7; }
+  .filt-by-color #col7 {
+    background-color: black; }
+  .filt-by-color #col8 {
+    background-color: white; }
 
 .thumbnail {
-  height: 228px;
-  font-family: Helvetica; }
+  height: 225px;
+  width: 225px;
+  font-family: Helvetica;
+  padding: 0;
+  margin-left: 18px;
+  border-radius: 3px; }
+  .thumbnail a img {
+    height: 180px;
+    width: 225px;
+    image-orientation: center; }
   .thumbnail .caption {
+    margin: 6px;
     padding: 0; }
+    .thumbnail .caption .caption-title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
     .thumbnail .caption h3 {
-      font-size: 15px;
-      margin: 6px 0 6px 0; }
+      font-size: 12px;
+      margin: 0 0 3px 0; }
     .thumbnail .caption a {
       text-decoration: none;
       color: #888888;
-      font-size: 10px; }
+      font-size: 12px;
+      vertical-align: top; }
     .thumbnail .caption p {
+      font-size: 12px;
       color: #75c238;
       float: right; }
 
