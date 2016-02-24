@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>4 2 etsy recreation</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+
+      <div class="row heading">
+        <div class="header">
+          <div class="col-md-1">
+            <div class="etsy-image">
+              <img src='../images/etsy.png' alt="">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="input-group search">
+              <input type="text" class="form-control" placeholder="Search">
+              <span class="input-group-btn">
+                <button class="btn btn-secondary search-btn" type="submit">Search</button>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-4 nav">
+            <ul class="nav-items">
+              <li><a href="">Sell on Etsy</a></li>
+              <li><a href="">Register</a></li>
+              <li id='sign-in'><a href="">Sign in</a></li>
+            </ul>
+            <button type="button" class="btn btn-default" aria-label="Left Align">
+              <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row categories">
+        <ul class="cats">
+          <li><a href="#">Clothing &amp; Accessories</a></li>
+          <li><a href="#">Jewelry</a></li>
+          <li><a href="#">Craft Supplies &amp; Tools</a></li>
+          <li><a href="#">Weddings</a></li>
+          <li><a href="#">Entertainment</a></li>
+          <li><a href="#">Home &amp; Living</a></li>
+          <li><a href="#">Kids &amp; Baby</a></li>
+          <li><a href="#">Vintage</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="container">
+
+      <div class="row content">
+        <div class="col-md-3">
+          <span id='show-results'>Show results for:</span>
+           <div class="first-sidebar">
+             <p id='all-cats'>All Categories</p>
+             <ul class='all-cats'>
+               <li><a href="#">Home &amp; Living</a></li>
+               <li><a href="#">Jerelry</a></li>
+               <li><a href="#">Art &amp; Collectibles</a></li>
+               <li><a href="#">Craft Supplies &amp; Tools</a></li>
+               <li><a href="#">Paper &amp; Party Supplies</a></li>
+               <li><a href="#">Weddings</a></li>
+               <li><a href="#">Accessories</a></li>
+               <li><a href="#">Pet Supplies</a></li>
+               <li><a href="#">Toys &amp; Games </a></li>
+               <li><a href="#">Bags &amp; Purses</a></li>
+               <li><a href="#">Books, Movies &amp; Music</a></li>
+               <li><a href="#">Electronics &amp; Accessories</a></li>
+               <li><a href="#">Bath &amp; Beauty</a></li>
+               <li><a href="#">Clothing</a></li>
+             </ul>
+           </div>
+        </div>
+        <div class="col-md-9">
+          <div class="row">
+            <div class="col-md-12 search-text">
+              <p class='inline'><a href="">All Categories</a> &raquo; {{numOfResults}}</p>
+              <p class='inline' id='sort-by'>Sort by: <span>Relevancy</span></p>
+              <p id="own-line">Did you mean the shop {{searchShop}}?</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class='search-text'></div>
+            <div class="col-md-4">
+              <div class="thumbnail">
+                <a href="">
+                  <img src="https://unsplash.it/225/180" alt="">
+                </a>
+                <div class="caption">
+                  <h3>Title</h3>
+                  <a href="">Store</a>
+                  <p>Price</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script id="search-text" type="text/x-handlebars-template">
+      <div class="col-md-12 search-text">
+        <p class='inline'><a href="">All Categories</a> &raquo; {{numOfResults}}</p>
+        <p class='inline' id='sort-by'>Sort by: <span>Relevancy</span></p>
+        <p id="own-line">Did you mean the shop {{searchShop}}?</p>
+      </div>
+    </script>
+
+
+
+    
+    <script src="js/bundle.js"></script>
+  </body>
+</html>
