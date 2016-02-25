@@ -7,9 +7,21 @@ var handlebars = require('handlebars');
 //
 //   //Execute a callback function with the JSON results from the url specified.
 //
-// //  Examples
-      var url = "https://api.etsy.com/v2/listings/active.js?api_key=wxzc5mem72u720g3hcpbpo86&keywords=terrarium&includes=Images,Shop";
 
+var url;
+url =  "https://api.etsy.com/v2/listings/active.js?api_key=wxzc5mem72u720g3hcpbpo86&keywords=terrarium&includes=Images,Shop";
+
+
+var newStuff = $('.search-btn').on('click', function(){
+  console.log(url);
+  var word = $('.search-area').val()
+  var urlPartOne = "https://api.etsy.com/v2/listings/active.js?api_key=wxzc5mem72u720g3hcpbpo86&keywords=";
+  var urlPartTwo = "&includes=Images,Shop";
+  var wholeUrl = urlPartOne + word + urlPartTwo;
+  url = wholeUrl;
+  return url
+})
+// url =newStuff;
 
 function fetchJSONP(url, callback) {
     var callbackName = 'jsonp_callback_' + Math.round(100000 * Math.random());
@@ -24,7 +36,6 @@ function fetchJSONP(url, callback) {
     script.src = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'callback=' + callbackName;
     document.body.appendChild(script);
 }
-
 
 
 
@@ -58,18 +69,20 @@ var compiled = templateSource(data);
 $('.images-section').html(compiled);
 
 
+$('#sort-by').on('click',function(event){
+    $('.sort-list').toggleClass('hide-it');
 
 
-
+})
 }
-
-
-
-
-
-
-
-
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 

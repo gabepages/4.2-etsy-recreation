@@ -18,7 +18,7 @@
           </div>
           <div class="col-md-4">
             <div class="input-group search">
-              <input type="text" class="form-control" placeholder="Search">
+              <input type="text" class="form-control search-area" placeholder="Search">
               <span class="input-group-btn">
                 <button class="btn btn-secondary search-btn" type="submit">Search</button>
               </span>
@@ -93,15 +93,15 @@
                    </li>
                  </ul>
              </div>
-             <p>Price ($)</p>
              <div class="price-filter">
+              <span>Price ($)</span>
               <textarea name="min" rows="2" cols="4" placeholder="min"></textarea>
               <p>to</p>
               <textarea name="min" rows="2" cols="4" placeholder="max"></textarea>
               <button type="submit" name="button">GO</button>
             </div>
-            <p>Filter by Color</p>
             <div class="filt-by-color">
+              <p>Filter by Color</p>
               <button id='col1' class='color' type="button" name="button"></button>
               <button id='col2' class='color' type="button" name="button"></button>
               <button id='col3' class='color' type="button" name="button"></button>
@@ -111,12 +111,28 @@
               <button id='col7' class='color' type="button" name="button"></button>
               <button id='col8' class='color' type="button" name="button"></button>
             </div>
-
-
-
-
-
-
+            <div class="ordering">
+              <p>Ordering Options</p>
+              <ul>
+                <li>
+                  <input type="checkbox" value=""><label>Accepts Etsy Gift-cards</label>
+                </li>
+                <li>
+                  <input type="checkbox" value=""><label>Customizable</label>
+                </li>
+              </ul>
+            </div>
+            <div class='shop-location'>
+                <p>Shop Lcation</p>
+                <ul>
+                  <li>
+                   <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"><label>Anywhere</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"><label>United States</label>
+                  </li>
+                </ul>
+            </div>
            </div>
         </div>
         <div class="col-md-9">
@@ -136,7 +152,15 @@
     <script id="search-text" type="text/x-handlebars-template">
       <div class="col-md-12 search-text">
         <p class='inline'><a href="">All Categories</a> &raquo; "terrarium" ( {{numOfResults}} results)</p>
-        <p class='inline' id='sort-by'>Sort by: <span>Relevancy</span> <span class="caret"></span></p>
+        <p class='inline' id='sort-by'>Sort by:
+          <span>Relevancy</span><span class="caret"></span>
+            <ul class="hide-it sort-list">
+              <li>Most Recent</li>
+              <li>Relevency</li>
+              <li>Highest Price</li>
+              <li>Lowest Price</li>
+            </ul>
+        </p>
         <p id="own-line">Did you mean the shop <a href="#">{{searchShop}}</a>?</p>
       </div>
     </script>
