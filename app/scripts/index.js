@@ -19,7 +19,7 @@ var newStuff = $('.search-btn').on('click', function(){
   var urlPartTwo = "&includes=Images,Shop";
   var wholeUrl = urlPartOne + word + urlPartTwo;
   url = wholeUrl;
-  return url
+  fetchJSONP(url, logData);
 })
 // url =newStuff;
 
